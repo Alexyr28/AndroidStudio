@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculate BMI</string>
+    <string name="saludo">Hello</string>
+    <string name="peso">Weight (Kg)</string>
+    <string name="altura">Height (Mts)</string>
+    <string name="pesokg">Weight in kilograms</string>
+    <string name="alturgamts">Height in meters</string>
+</resources>

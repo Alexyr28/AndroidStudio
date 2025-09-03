@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">CalcularImc</string>
+    <string name="app_name">Calcular Imc</string>
+    <string name="saludo">Hola</string>
+    <string name="peso">Peso (Kg)</string>
+    <string name="altura">Altura (Mts)</string>
+    <string name="pesokg">Peso en Kilogramos</string>
+    <string name="alturgamts">Altura en Metros</string>
 </resources>

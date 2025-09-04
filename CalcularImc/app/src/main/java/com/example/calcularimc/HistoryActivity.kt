@@ -43,7 +43,7 @@ class HistoryActivity : AppCompatActivity() {
                 val categoria = cursor.getString(cursor.getColumnIndexOrThrow("categoria"))
                 val fecha = cursor.getString(cursor.getColumnIndexOrThrow("fecha"))
 
-                val registro = "$peso1 $peso Kg, $alt1 $altura m, $bmi $imc, $categoria $categoria1, $fecha1 $fecha"
+                val registro = "$peso1 $peso Kg, $alt1 $altura m, $bmi $imc, $categoria1 $categoria, $fecha1 $fecha"
 
                 record.add(registro)
             }while (cursor.moveToNext())

@@ -43,7 +43,15 @@ class HistoryActivity : AppCompatActivity() {
                 val categoria = cursor.getString(cursor.getColumnIndexOrThrow("categoria"))
                 val fecha = cursor.getString(cursor.getColumnIndexOrThrow("fecha"))
 
-                val registro = "$peso1 $peso Kg, $alt1 $altura m, $bmi $imc, $categoria1 $categoria, $fecha1 $fecha"
+                val categoriaTraducida = when (categoria) {
+                    "bajo_peso" -> getString(R.string.bajo_peso)
+                    "peso_saludable" -> getString(R.string.peso_saludable)
+                    "sobrepeso" -> getString(R.string.sobrepeso)
+                    "obesidad" -> getString(R.string.obesidad)
+                    else -> categoria // Si no coincide, dejamos el valor tal cual
+                }
+
+                val registro = "$peso1 $peso Kg, $alt1 $altura m, $bmi $imc, $categoria1 $categoriaTraducida, $fecha1 $fecha"
 
                 record.add(registro)
             }while (cursor.moveToNext())

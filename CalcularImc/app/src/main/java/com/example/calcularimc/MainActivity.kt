@@ -79,10 +79,18 @@ class MainActivity : AppCompatActivity() {
                         val imc = (peso/(altura*altura))
 
                         val cate = when {
-                            imc < 18.5 -> getString(R.string.bajo_peso)
-                            imc in 18.5..24.9 -> getString(R.string.peso_saludable)
-                            imc in 25.0..29.9 -> getString(R.string.sobrepeso)
-                            else -> getString(R.string.obesidad)
+                            imc < 18.5 -> "bajo_peso"
+                            imc in 18.5..24.9 -> "peso_saludable"
+                            imc in 25.0..29.9 -> "sobrepeso"
+                            else -> "obesidad"
+                        }
+
+                        val cateTraducida1 = when (cate) {
+                            "bajo_peso" -> getString(R.string.bajo_peso)
+                            "peso_saludable" -> getString(R.string.peso_saludable)
+                            "sobrepeso" -> getString(R.string.sobrepeso)
+                            "obesidad" -> getString(R.string.obesidad)
+                            else -> cate // Si no coincide, dejamos el valor tal cual
                         }
 
                         val imcdato = String.format("%.2f",(peso/(altura*altura)))
@@ -92,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                         //IngresarDatos a SQLITE
                         dbhelper.insertIMC(peso,altura,imc,cate,fecha)
 
-                        tvResultado.text = "$tuimc $imcdato \n $tucate $cate"
+                        tvResultado.text = "$tuimc $imcdato \n $tucate $cateTraducida1"
                     }
                 }else{
                     Toast.makeText(this, "$campovacio", Toast.LENGTH_SHORT).show()

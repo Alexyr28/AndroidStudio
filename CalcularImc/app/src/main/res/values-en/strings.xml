@@ -6,4 +6,23 @@
     <string name="altura">Height (Mts)</string>
     <string name="pesokg">Weight in kilograms</string>
     <string name="alturgamts">Height in meters</string>
+    <string name="bajo_peso">Underweight</string>
+    <string name="peso_saludable">Healthy weight</string>
+    <string name="sobrepeso">Overweight</string>
+    <string name="obesidad">Obesity</string>
+    <string name="tuimc">Your BMI is</string>
+    <string name="tucate">Your Category is</string>
+    <string name="campovacio">Fields cannot be empty</string>
+    <string name="error">Error calculating BMI, Check Data</string>
+    <string name="nombre">Name</string>
+    <string name="guardar">Save</string>
+    <string name="guardarex">Saved Successfully</string>
+    <string name="errorguardar">Error saving</string>
+    <string name="historia">History</string>
+    <string name="peso1">Weight:</string>
+    <string name="altura1">Height:</string>
+    <string name="imc">BMI:</string>
+    <string name="cate">Category:</string>
+    <string name="fecha">Date:</string>
+    <string name="noreg">There are no records to display</string>
 </resources>

@@ -26,6 +26,15 @@ class HistoryActivity : AppCompatActivity() {
         val cursor = dbHelper.getAllRecords()
         val record = mutableListOf<String>()
 
+        //Variables
+        val peso1 = getString(R.string.peso1)
+        val alt1 = getString(R.string.altura1)
+        val bmi = getString(R.string.imc)
+        val categoria1 = getString(R.string.cate)
+        val fecha1 = getString(R.string.fecha)
+        val noreg = getString(R.string.noreg)
+        //------------------------------
+
         if(cursor.moveToFirst()){
             do{
                 val peso = cursor.getString(cursor.getColumnIndexOrThrow("peso"))
@@ -34,12 +43,12 @@ class HistoryActivity : AppCompatActivity() {
                 val categoria = cursor.getString(cursor.getColumnIndexOrThrow("categoria"))
                 val fecha = cursor.getString(cursor.getColumnIndexOrThrow("fecha"))
 
-                val registro = "Peso: $peso Kg, Altura: $altura m, IMC: $imc, Categoria: $categoria, Fecha: $fecha"
+                val registro = "$peso1 $peso Kg, $alt1 $altura m, $bmi $imc, $categoria $categoria1, $fecha1 $fecha"
 
                 record.add(registro)
             }while (cursor.moveToNext())
         }else{
-            Toast.makeText(this, "No hay registros para mostrar", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "$noreg", Toast.LENGTH_SHORT).show()
         }
 
         cursor.close()

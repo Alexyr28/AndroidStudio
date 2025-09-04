@@ -28,6 +28,11 @@ class UserActivity : AppCompatActivity() {
         val sp = getSharedPreferences("Datos", Context.MODE_PRIVATE)
         //-----------------------
 
+        //Variables
+        val guardarex = getString(R.string.guardarex)
+        val errorguardar = getString(R.string.errorguardar)
+        //-----------------------
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -42,10 +47,10 @@ class UserActivity : AppCompatActivity() {
                     val editor = sp.edit()
                     editor.putString("Name", userName)
                     editor.apply()
-                    Toast.makeText(this, "Guardado Con Exito", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "$guardarex", Toast.LENGTH_SHORT).show()
                 }
             }catch (e: Exception){
-                Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "$errorguardar", Toast.LENGTH_SHORT).show()
             }
         }
 

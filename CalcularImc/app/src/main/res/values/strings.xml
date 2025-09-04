@@ -5,4 +5,23 @@
     <string name="altura">Altura (Mts)</string>
     <string name="pesokg">Peso en Kilogramos</string>
     <string name="alturgamts">Altura en Metros</string>
+    <string name="bajo_peso">Bajo Peso</string>
+    <string name="peso_saludable">Peso Saludable</string>
+    <string name="sobrepeso">Sobrepeso</string>
+    <string name="obesidad">Obesidad</string>
+    <string name="tuimc">Tu IMC es: </string>
+    <string name="tucate">Tu categoria es: </string>
+    <string name="campovacio">Los campos no pueden estar vacíos</string>
+    <string name="error">Error al calcular el IMC, Verificar Datos</string>
+    <string name="nombre">Nombre</string>
+    <string name="guardar">Guardar</string>
+    <string name="guardarex">uardado Con Exito</string>
+    <string name="errorguardar">Error al guardar</string>
+    <string name="historia">Historia</string>
+    <string name="peso1">Peso:</string>
+    <string name="altura1">Altura:</string>
+    <string name="imc">IMC:</string>
+    <string name="cate">Categoria:</string>
+    <string name="fecha">Fecha:</string>
+    <string name="noreg">No hay registros para mostrar</string>
 </resources>

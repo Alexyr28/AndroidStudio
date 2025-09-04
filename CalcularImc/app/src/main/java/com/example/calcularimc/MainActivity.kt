@@ -43,6 +43,11 @@ class MainActivity : AppCompatActivity() {
         }
         //Recuperar Nombre
         val userName = sp.getString("Name", null)
+        val saludo = getString(R.string.saludo)
+        val tuimc = getString(R.string.tuimc)
+        val tucate = getString(R.string.tucate)
+        val campovacio = getString(R.string.campovacio)
+        val error = getString(R.string.error)
         //---------------------------
 
         //Validar Si no hay nombre
@@ -51,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent1)
             finish()
         }else{
-            tvName.text = "Hola, $userName"
+            tvName.text = "$saludo, $userName"
         }
         //-----------------------------------
 
@@ -68,30 +73,33 @@ class MainActivity : AppCompatActivity() {
                 if(peso.isNotEmpty() || altura.isNotEmpty()){
                     val peso = peso.toDouble()
                     val altura = altura.toDouble()
-                    val imc = (peso/(altura*altura))
+                    if(peso == 0.0 || altura == 0.0){
+                        Toast.makeText(this, "$error", Toast.LENGTH_SHORT).show()
+                    }else{
+                        val imc = (peso/(altura*altura))
 
-                    val cate = when {
-                        imc < 18.5 -> "Bajo Peso"
-                        imc in 18.5..24.9 -> "Peso Saludable"
-                        imc in 25.0..29.9 -> "Sobrepeso"
-                        else -> "Obesidad"
+                        val cate = when {
+                            imc < 18.5 -> getString(R.string.bajo_peso)
+                            imc in 18.5..24.9 -> getString(R.string.peso_saludable)
+                            imc in 25.0..29.9 -> getString(R.string.sobrepeso)
+                            else -> getString(R.string.obesidad)
+                        }
+
+                        val imcdato = String.format("%.2f",(peso/(altura*altura)))
+                        val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+                        val fecha = sdf.format(Date())
+
+                        //IngresarDatos a SQLITE
+                        dbhelper.insertIMC(peso,altura,imc,cate,fecha)
+
+                        tvResultado.text = "$tuimc $imcdato \n $tucate $cate"
                     }
-
-                    val imcdato = String.format("%.2f",(peso/(altura*altura)))
-                    val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
-                    val fecha = sdf.format(Date())
-
-                    //IngresarDatos a SQLITE
-                    dbhelper.insertIMC(peso,altura,imc,cate,fecha)
-
-                    tvResultado.text = "Tu IMC es: $imcdato \n Tu categoria es: $cate"
-
                 }else{
-                    Toast.makeText(this, "Los campos no pueden estar vacíos", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "$campovacio", Toast.LENGTH_SHORT).show()
                 }
 
             }catch (e: Exception){
-                Toast.makeText(this, "Error al calcular el IMC, Verificar Datos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "$error", Toast.LENGTH_SHORT).show()
             }
         }
         //---------------------------------------

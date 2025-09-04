@@ -15,7 +15,7 @@
     <string name="error">Error al calcular el IMC, Verificar Datos</string>
     <string name="nombre">Nombre</string>
     <string name="guardar">Guardar</string>
-    <string name="guardarex">uardado Con Exito</string>
+    <string name="guardarex">Guardado Con Exito</string>
     <string name="errorguardar">Error al guardar</string>
     <string name="historia">Historia</string>
     <string name="peso1">Peso:</string>

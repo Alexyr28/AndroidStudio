@@ -25,4 +25,8 @@
     <string name="cate">Category:</string>
     <string name="fecha">Date:</string>
     <string name="noreg">There are no records to display</string>
+    <string name="acceso">Login</string>
+    <string name="usuario">User</string>
+    <string name="contra">Password</string>
+    <string name="ingresar">Login</string>
 </resources>

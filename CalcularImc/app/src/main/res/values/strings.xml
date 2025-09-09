@@ -28,4 +28,10 @@
     <string name="usuario">Usuario</string>
     <string name="contra">Contraseña</string>
     <string name="ingresar">Ingresar</string>
+    <string name="registrar">Registrar</string>
+    <string name="usernoexist">Usuario No existe</string>
+    <string name="credinvalid">Credenciales Inválidas</string>
+    <string name="error2">Error al verificar Usuario</string>
+    <string name="regexitoso">Usuario Registrado Correctamente</string>
+    <string name="userexist">Usuario ya existe</string>
 </resources>

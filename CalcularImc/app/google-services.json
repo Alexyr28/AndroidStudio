@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "563349845023",
+    "project_id": "calcularimc-5d8d4",
+    "storage_bucket": "calcularimc-5d8d4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563349845023:android:8be505b4acb13d6ebfd12a",
+        "android_client_info": {
+          "package_name": "com.example.calcularimc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAZ_0hQw8zccfaSejhsaE6y3HBuQG4kg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

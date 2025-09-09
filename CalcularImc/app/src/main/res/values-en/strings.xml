@@ -29,4 +29,10 @@
     <string name="usuario">User</string>
     <string name="contra">Password</string>
     <string name="ingresar">Login</string>
+    <string name="registrar">Register</string>
+    <string name="usernoexist">User does not exist</string>
+    <string name="credinvalid">Invalid Credentials</string>
+    <string name="error2">Error verifying User</string>
+    <string name="regexitoso">User Successfully Registered</string>
+    <string name="userexist">User already exists</string>
 </resources>

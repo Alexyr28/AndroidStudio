@@ -24,7 +24,7 @@
         android:id="@+id/btnUser"
         android:layout_width="103dp"
         android:layout_height="93dp"
-        android:background="@drawable/rounded_button"
+        android:background="@android:color/transparent"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,6 +97,7 @@
             android:layout_height="83dp"
             android:textAlignment="center"
             android:textSize="20sp" />
+
     </LinearLayout>
 
     <Button
@@ -125,5 +126,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.975"
         app:srcCompat="@drawable/historia" />
+
+    <ImageButton
+        android:id="@+id/btnlogout"
+        android:layout_width="71dp"
+        android:layout_height="59dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/logout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

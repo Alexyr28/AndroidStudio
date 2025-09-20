@@ -21,7 +21,7 @@ import java.util.Locale
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         Thread.sleep(2000)
-        setTheme(R.style.Theme_CalcularImc)
+        setTheme(R.style.ThemeCalcularImc)
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
